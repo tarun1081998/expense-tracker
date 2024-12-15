@@ -70,9 +70,9 @@ html, body {
   justify-content: center;
   align-items: center;
   background-color: #E0E0E0;
-  padding: 70px 100px;
+  padding: 50px;
   border-radius: 10px;
-  width: 300px;
+  width: 30%;
 }
 
 /* balance summary */
@@ -89,7 +89,7 @@ html, body {
 
 .expense{
   background-color: #E0E0E0;
-  padding: 70px 100px;
+  padding: 50px;
   border-radius: 10px;
-  width: 300px;
+  width: 30%;
 }
