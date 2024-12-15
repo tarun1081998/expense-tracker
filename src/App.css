@@ -72,6 +72,7 @@ html, body {
   background-color: #E0E0E0;
   padding: 70px 100px;
   border-radius: 10px;
+  width: 300px;
 }
 
 /* balance summary */
@@ -90,4 +91,5 @@ html, body {
   background-color: #E0E0E0;
   padding: 70px 100px;
   border-radius: 10px;
+  width: 300px;
 }

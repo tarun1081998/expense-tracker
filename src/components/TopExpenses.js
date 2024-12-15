@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
-const data = [
-  { category: "Entertainment", amount: 300 },
-  { category: "Food", amount: 150 },
-  { category: "Travel", amount: 50 },
-];
-
 function TopExpenses({expenses}) {
 
     const [data, setData] = useState([])
@@ -32,6 +26,7 @@ function TopExpenses({expenses}) {
         borderRadius: "8px",
         color: "#333",
         height: "400px",
+        overflow: 'scroll'
       }}
     >
       <h3 style={{ fontStyle: "italic", marginBottom: "10px" }}>Top Expenses</h3>

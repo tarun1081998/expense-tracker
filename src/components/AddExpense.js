@@ -9,6 +9,7 @@ const AddExpense = ({ expenses, setWalletBalance, addExpense, onCancel }) => {
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("");
   const [date, setDate] = useState("");
+  const walletBalance = window.localStorage.getItem('walletBalance')
 
   const handleAddExpense = () => {
     if (!title || !amount || !category || !date) {
@@ -16,7 +17,7 @@ const AddExpense = ({ expenses, setWalletBalance, addExpense, onCancel }) => {
       return;
     }
 
-    if (parseFloat(amount) > expenses) {
+    if (parseFloat(amount) > walletBalance) {
       enqueueSnackbar("Insufficient wallet balance!", { variant: "error" });
       return;
     }
@@ -29,7 +30,7 @@ const AddExpense = ({ expenses, setWalletBalance, addExpense, onCancel }) => {
       date,
     };
     addExpense(expense);
-    setWalletBalance(expenses - parseFloat(amount));
+    setWalletBalance(walletBalance - parseFloat(amount));
     setTitle("");
     setAmount("");
     setCategory("");
