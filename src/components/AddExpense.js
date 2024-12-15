@@ -3,7 +3,7 @@ import { useSnackbar } from "notistack";
 import InputBox from "./InputBox";
 import Button from "./Button";
 
-const AddExpense = ({ expenses, setWalletBalance, addExpense, onCancel }) => {
+const AddExpense = ({ setWalletBalance, addExpense, onCancel }) => {
   const { enqueueSnackbar } = useSnackbar();
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import Modal from 'react-modal';
 import AddBalance from "./AddBalance";
 
-function WalletBalance({ walletBalance, setWalletBalance }) {
+const WalletBalance = ({ walletBalance, setWalletBalance }) => {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
   const handleAddBalance = (amount) => {

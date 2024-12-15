@@ -1,6 +1,6 @@
 import React from "react";
 
-function RecentTransactions({expenses}) {
+const RecentTransactions = ({expenses}) => {
   return (
     <div style={{ backgroundColor: "#fff", padding: "20px", borderRadius: "8px", color: "#333", height:'400px', overflowY:'scroll' }}>
       <h3 style={{ fontStyle: "italic", marginBottom: "10px" }}>Recent Transactions</h3>

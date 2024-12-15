@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import WalletBalance from "./components/WalletBalance";
-import ExpenseList from "./components/ExpenseList";
 import ExpenseSummary from "./components/ExpenseSummary";
 import { saveToLocalStorage, getFromLocalStorage } from "./utils/localStorageUtils";
 import Expense from "./components/Expense";
@@ -24,10 +23,6 @@ function App() {
 
   const addExpense = (expense) => {
     setExpenses([...expenses, expense]);
-  };
-
-  const deleteExpense = (id) => {
-    setExpenses(expenses.filter((expense) => expense.id !== id));
   };
 
   return (

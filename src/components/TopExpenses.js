@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
-function TopExpenses({expenses}) {
+const TopExpenses = ({expenses}) => {
 
     const [data, setData] = useState([])
 
     useEffect(()=>{
         let expenseData = []
-        expenses.map((x)=>{
+        expenses.forEach((x)=>{
             let category = expenseData.find(c=>c.category===x.category)
             if(category){
                 category.amount+=x.amount

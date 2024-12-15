@@ -22,7 +22,6 @@ function Expense({ expenses, setWalletBalance, addExpense }) {
         overlayClassName="modal-overlay"
       >
         <AddExpenseForm
-          walletBalance={expenses}
           setWalletBalance={setWalletBalance}
           addExpense={addExpense}
           onCancel={() => setIsAddModalOpen(false)}
