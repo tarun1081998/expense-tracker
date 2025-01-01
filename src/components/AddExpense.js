@@ -42,29 +42,33 @@ const AddExpense = ({ setWalletBalance, addExpense, onCancel }) => {
     <div>
       <h1>Add Expense</h1>
       <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-        <InputBox
-          type="text"
-          placeholder="Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <InputBox
-          type="number"
-          placeholder="Amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-        />
-        <InputBox
-          type="text"
-          placeholder="Category"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        />
-        <InputBox
-          type="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        />
+        <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}> 
+          <InputBox
+            type="text"
+            placeholder="Title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <InputBox
+            type="number"
+            placeholder="Price"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+        </div>
+        <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}> 
+          <InputBox
+            type="text"
+            placeholder="Category"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          />
+          <InputBox
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+        </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Button label="Add Expense" onClick={handleAddExpense} color="#FFDB58" />
           <Button label="Cancel" onClick={onCancel} color="#D3D3D3" />
