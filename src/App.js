@@ -25,6 +25,10 @@ function App() {
     setExpenses([...expenses, expense]);
   };
 
+  const deleteExpense = (id) => {
+    setExpenses(pre => pre.filter(x=>x.id!==id))
+  }
+
   return (
     <div>
       <h1>Expense Tracker</h1>
@@ -35,7 +39,7 @@ function App() {
       </div>
       <div style={{display: 'flex', justifyContent:"space-between"}}>
         <div style={{width:'50%', margin:'2%'}}>
-          <RecentTransactions expenses={expenses}/>
+          <RecentTransactions expenses={expenses} onDelete={deleteExpense}/>
         </div>
         <div style={{width:'50%', margin:'2%'}}>
           <TopExpenses expenses={expenses}/>
